@@ -1,0 +1,14 @@
+bindAddr = "0.0.0.0"
+bindPort = 7000
+kcpBindPort = 7000
+
+auth.method = "token"
+auth.token = "your token"
+
+webServer.addr = "0.0.0.0"
+webServer.port = 7500
+# dashboard's username and password are both optional
+webServer.user = "admin"
+webServer.password = "admin"
+# webServer.tls.certFile = "/path/to/server.crt"
+# webServer.tls.keyFile = "/path/to/server.key"
