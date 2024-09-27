@@ -22,18 +22,17 @@ platform="$(uname)"
 architecture="$(uname -m)"
 release="unknown"
 
-while [[ "$#" -gt 0 ]]; do
-  case "$1" in
+for arg in "$@"; do
+  case $arg in
     --help)
       echo "$help_message"
       exit 0
       ;;
-    --release)
-      release="$2"
-      shift 2
+    --release=*)
+      release="${arg#*=}"
       ;;
     *)
-      echo "Unknown option: $1"
+      echo "Unknown option: $arg"
       exit 1
       ;;
   esac
